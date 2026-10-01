@@ -1,0 +1,15 @@
+/* [精修覆盖层] 按钮磨砂玻璃、下一只头像、明显判定线和更舒适的游戏高度。 */
+:root{--cat-glass:linear-gradient(145deg,#ffffffc9,#fff6f6a8)}
+.topbar,.panel-card,.tip-card,.journal-card{backdrop-filter:blur(18px) saturate(1.15)}
+.icon-button,.restart-button,.install-button,.mobile-controls button,.primary-button,.secondary-button{border:1px solid #ffffffb8!important;background:linear-gradient(145deg,#ffffffc9,#fff4f6a8)!important;box-shadow:0 8px 20px #9d64701a,inset 0 1px #ffffff!important;backdrop-filter:blur(14px) saturate(1.3);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+.icon-button:hover,.restart-button:hover,.install-button:hover,.mobile-controls button:hover,.primary-button:hover,.secondary-button:hover{transform:translateY(-2px);box-shadow:0 11px 24px #9d647025,inset 0 1px #fff!important;filter:saturate(1.12)}
+.next-card strong{display:grid;place-items:center;width:48px;height:48px}
+.next-card strong img{width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 4px 3px #52394325);animation:nextMascotBob 2.5s ease-in-out infinite}
+@keyframes nextMascotBob{50%{transform:translateY(-4px) rotate(3deg)}}
+.board-frame{box-shadow:0 22px 48px #9e5a7020,inset 0 0 0 1px #fff,inset 0 -8px 20px #f6d9df70!important}
+#gameCanvas{aspect-ratio:420/760!important;height:auto!important;touch-action:none}
+.mobile-controls{gap:10px}
+.mobile-controls button{border-color:#f1dbe1!important;background:linear-gradient(145deg,#ffffffd9,#fff0f4bd)!important;color:#b95575;font-weight:850}
+.dark .icon-button,.dark .restart-button,.dark .install-button,.dark .mobile-controls button,.dark .primary-button,.dark .secondary-button{border-color:#ffffff30!important;background:linear-gradient(145deg,#6b5060bb,#483542c9)!important;color:#ffe4eb;box-shadow:0 8px 20px #140c1330,inset 0 1px #ffffff2b!important}
+@media(max-width:760px){#gameCanvas{aspect-ratio:420/760!important}.next-card strong,.next-card strong img{width:42px;height:42px}}
+@media(prefers-reduced-motion:reduce){.next-card strong img{animation:none}.icon-button,.restart-button,.install-button,.mobile-controls button,.primary-button,.secondary-button{transition:none}}
